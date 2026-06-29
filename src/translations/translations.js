@@ -23,6 +23,7 @@ export const translations = {
     },
     home: {
       hello: "Hello, I am Viktoria",
+      introTitle: "Clean UI, curious code",
       intro:
         "An IT student at Business and Technology University, building clean web interfaces and growing my backend skills with Node.js.",
       quoteTitle: "Programming quote of the day",
@@ -141,6 +142,7 @@ export const translations = {
     contact: {
       title: "Contact",
       subtitle: "Have a question or project idea? Send a message.",
+      connectTitle: "Let's connect",
       name: "Name",
       email: "Email",
       message: "Message",
@@ -176,6 +178,7 @@ export const translations = {
     },
     home: {
       hello: "გამარჯობა, მე ვარ ვიქტორია",
+      introTitle: "დახვეწილი UI, გააზრებული კოდი",
       intro:
         "BTU-ის IT სტუდენტი, რომელიც ქმნის სუფთა ვებ ინტერფეისებს და Node.js-ით backend უნარებს ავითარებს.",
       quoteTitle: "დღის პროგრამირების ციტატა",
@@ -289,6 +292,7 @@ export const translations = {
     contact: {
       title: "კონტაქტი",
       subtitle: "შეკითხვის ან იდეის შემთხვევაში მომწერეთ.",
+      connectTitle: "დამიკავშირდით",
       name: "სახელი",
       email: "ელფოსტა",
       message: "შეტყობინება",

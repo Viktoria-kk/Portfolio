@@ -19,7 +19,7 @@ I wanted the website to feel modern, feminine, clean, and a little creative with
 - Repository search, language filter, and sorting
 - Project details modal
 - Favorite repositories saved in `localStorage`
-- Contact form with frontend validation
+- Contact links for GitHub, email, and LinkedIn
 - GitHub Pages-ready routing with `HashRouter`
 
 ## Skills And Tools Included
@@ -62,17 +62,15 @@ Then open the local URL printed in the terminal.
 npm run build
 ```
 
-## Deploying To GitHub Pages
+### Manual Deployment With gh-pages
 
-This project uses `HashRouter`, so refreshing pages works safely on GitHub Pages.
-
-1. Create a GitHub repository named `Portfolio`.
-2. Check the `homepage` field in `package.json`.
-3. Run:
+The project also includes a manual deployment script:
 
 ```bash
 npm run deploy
 ```
+
+This builds the project and publishes the `dist` folder to the `gh-pages` branch.
 
 ## Folder Structure
 
@@ -92,17 +90,7 @@ src/
 
 ## Screenshots
 
-I can add screenshots here after the website is deployed:
-
 - Home page
 - About page
 - Projects page
 - Dark mode
-- Mobile navigation
-
-## Future Improvements
-
-- Add more detailed descriptions to my GitHub repositories
-- Add screenshots after deployment
-- Connect the contact form to a real backend or form service
-- Continue improving the Georgian translation and accessibility details

@@ -16,7 +16,7 @@ function Home() {
       <section className="home-intro section">
         <div className="container home-intro__grid">
           <div>
-            <SectionTitle title="Clean UI, curious code" subtitle={t.home.intro} />
+            <SectionTitle title={t.home.introTitle} subtitle={t.home.intro} />
             <div className="home-intro__actions reveal">
               <Button to="/about" variant="secondary">
                 {t.nav.about}

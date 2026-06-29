@@ -1,4 +1,4 @@
-const excludedRepositoryNames = ['Viktoria-kk', 'Re-educate-hw'];
+const excludedRepositoryNames = ['Viktoria-kk', 'Re-educate-hw', '10x-homework-1', 'CV'];
 const excludedLanguages = ['Python'];
 
 export function shouldDisplayRepository(repository) {

@@ -1,4 +1,8 @@
 .home-intro {
+  .section-title h2 {
+    line-height: 1.02;
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
