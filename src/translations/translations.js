@@ -83,7 +83,7 @@ export const translations = {
         },
         {
           title: "Backend",
-          items: ["Node.js", "Express", "EJS", "Axios", "SQL", "MongoDB"],
+          items: ["Node.js", "Express.js", "EJS", "Axios", "SQL", "MongoDB"],
         },
         {
           title: "Data & ML",
@@ -99,7 +99,7 @@ export const translations = {
           title: "Frontend",
           items: ["HTML", "CSS", "JavaScript", "React"],
         },
-        { title: "Backend", items: ["Node.js", "Express", "EJS", "Axios"] },
+        { title: "Backend", items: ["Node.js", "Express.js", "EJS", "Axios"] },
         {
           title: "Data",
           items: ["Python", "PostgreSQL", "MongoDB", "Power BI"],
@@ -110,7 +110,7 @@ export const translations = {
         {
           year: "Now",
           title: "Backend, Data & ML",
-          text: "Learning Node.js, Express, EJS, Axios, databases, Machine Learning, and Data Science.",
+          text: "Learning Node.js, Express.js, EJS, Axios, databases, Machine Learning, and Data Science.",
         },
         {
           year: "BTU",
@@ -234,7 +234,7 @@ export const translations = {
         },
         {
           title: "Backend",
-          items: ["Node.js", "Express", "EJS", "Axios", "SQL", "MongoDB"],
+          items: ["Node.js", "Express.js", "EJS", "Axios", "SQL", "MongoDB"],
         },
         {
           title: "Data & ML",
@@ -250,7 +250,7 @@ export const translations = {
           title: "Frontend",
           items: ["HTML", "CSS", "JavaScript", "React"],
         },
-        { title: "Backend", items: ["Node.js", "Express", "EJS", "Axios"] },
+        { title: "Backend", items: ["Node.js", "Express.js", "EJS", "Axios"] },
         {
           title: "Data",
           items: ["Python", "PostgreSQL", "MongoDB", "Power BI"],
@@ -261,7 +261,7 @@ export const translations = {
         {
           year: "ახლა",
           title: "Backend, მონაცემები და ML",
-          text: "ვსწავლობ Node.js-ს, Express-ს, EJS-ს, Axios-ს, მონაცემთა ბაზებს, Machine Learning-ს და Data Science-ს.",
+          text: "ვსწავლობ Node.js-ს, Express.js-ს, EJS-ს, Axios-ს, მონაცემთა ბაზებს, Machine Learning-ს და Data Science-ს.",
         },
         {
           year: "BTU",
