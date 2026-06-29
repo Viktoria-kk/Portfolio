@@ -1,99 +1,154 @@
 @use '../../styles/variables' as *;
 
 .contact {
-  &__grid {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, var(--blob-one), transparent 24rem),
+    radial-gradient(circle at 88% 12%, var(--blob-two), transparent 24rem),
+    linear-gradient(135deg, var(--hero-start), var(--hero-end));
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__decor {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    span {
+      position: absolute;
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      background: var(--glass-bg);
+      box-shadow: var(--shadow-soft);
+      animation: contactFloat 8s ease-in-out infinite;
+
+      &:nth-child(1) {
+        width: 130px;
+        height: 130px;
+        top: 18%;
+        left: 7%;
+      }
+
+      &:nth-child(2) {
+        width: 86px;
+        height: 86px;
+        right: 11%;
+        top: 26%;
+        animation-delay: 1.2s;
+      }
+
+      &:nth-child(3) {
+        width: 112px;
+        height: 112px;
+        right: 22%;
+        bottom: 12%;
+        animation-delay: 2s;
+      }
+    }
+  }
+
+  &__panel {
     display: grid;
-    grid-template-columns: minmax(0, 0.8fr) minmax(300px, 1fr);
-    gap: 2rem;
-    align-items: start;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 5vw, 3rem);
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 34px;
+    padding: clamp(1.4rem, 5vw, 2.8rem);
+    background: var(--glass-bg);
+    backdrop-filter: blur(22px);
+    box-shadow: var(--shadow-large);
+  }
+
+  &__intro {
+    h3 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 0.98;
+    }
+
+    p {
+      color: var(--text-secondary);
+    }
+
+    &--ka h3 {
+      font-size: clamp(1.65rem, 3.8vw, 2.65rem);
+      line-height: 1.08;
+      overflow-wrap: anywhere;
+    }
   }
 
   &__links {
     display: grid;
-    gap: 0.8rem;
-
-    a,
-    span {
-      border: 1px solid var(--border-color);
-      border-radius: 18px;
-      padding: 1rem;
-      color: var(--text-secondary);
-      background: var(--surface);
-      text-decoration: none;
-      font-weight: 800;
-      transition: transform $transition-fast, border-color $transition-fast;
-    }
-
-    a:hover {
-      transform: translateX(6px);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-  }
-
-  &__form {
-    display: grid;
     gap: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 28px;
-    padding: clamp(1.2rem, 4vw, 2rem);
-    background: var(--surface);
-    box-shadow: var(--shadow-medium);
-    transition: transform 0.3s ease;
 
-    &.sent {
-      animation: sentPop 0.45s ease;
-    }
-
-    label {
+    a {
+      position: relative;
       display: grid;
-      gap: 0.45rem;
-      color: var(--text-primary);
-      font-weight: 800;
-    }
-
-    input,
-    textarea {
-      width: 100%;
+      gap: 0.2rem;
+      overflow: hidden;
       border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 0.9rem 1rem;
+      border-radius: 22px;
+      padding: 1.15rem 1.25rem;
       color: var(--text-primary);
-      background: var(--surface-soft);
-      font: inherit;
-      outline: none;
-      resize: vertical;
+      background: var(--surface-strong);
+      text-decoration: none;
+      box-shadow: var(--shadow-soft);
+      transition: transform $transition-fast, border-color $transition-fast, box-shadow $transition-fast;
 
-      &:focus {
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 5px;
+        background: var(--gradient-primary);
+      }
+
+      &:hover {
+        transform: translateY(-4px);
         border-color: var(--accent);
-        box-shadow: 0 0 0 4px var(--focus-ring);
+        box-shadow: var(--shadow-medium);
       }
     }
 
-    label span {
-      color: var(--danger);
-      font-size: 0.84rem;
+    span {
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    strong {
+      overflow-wrap: anywhere;
+      font-size: clamp(1rem, 2vw, 1.15rem);
     }
   }
-
-  &__success {
-    margin: 0;
-    border-radius: 16px;
-    padding: 0.9rem 1rem;
-    color: var(--success-text);
-    background: var(--success-bg);
-    font-weight: 800;
-  }
 }
 
-@keyframes sentPop {
+@keyframes contactFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
   50% {
-    transform: scale(1.015);
+    transform: translateY(-18px);
   }
 }
 
-@media (max-width: 840px) {
-  .contact__grid {
-    grid-template-columns: 1fr;
+@media (max-width: 780px) {
+  .contact {
+    &__panel {
+      grid-template-columns: 1fr;
+    }
+
+    &__decor span {
+      opacity: 0.55;
+    }
   }
 }
