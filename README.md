@@ -1,6 +1,6 @@
-# Viktoria Portfolio
+﻿# Viktoria Portfolio
 
-This is my personal React portfolio website for a university project. I built it to introduce myself as Viktoria, an IT student at Business and Technology University (BTU), and to show my current learning journey, interests, and GitHub projects.
+This is my personal React portfolio website for a university project. I built it to introduce myself as Viktoria, an IT student at Business and Technology University, and to show my current learning journey, interests, and GitHub projects.
 
 ## What I Wanted To Build
 
@@ -90,7 +90,22 @@ src/
 
 ## Screenshots
 
-- Home page
-- About page
-- Projects page
-- Dark mode
+### Home Page
+
+![Home page](screenshots/home.png)
+
+### About Page
+
+![About page](screenshots/about.png)
+
+### Projects Page
+
+![Projects page](screenshots/projects.png)
+
+### Contact Page
+
+![Contact page](screenshots/contact.png)
+
+### Dark Mode
+
+![Dark mode](screenshots/dark-mode.png)
