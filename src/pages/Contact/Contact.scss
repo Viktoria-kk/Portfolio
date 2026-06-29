@@ -1,0 +1,99 @@
+@use '../../styles/variables' as *;
+
+.contact {
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(300px, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  &__links {
+    display: grid;
+    gap: 0.8rem;
+
+    a,
+    span {
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 1rem;
+      color: var(--text-secondary);
+      background: var(--surface);
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform $transition-fast, border-color $transition-fast;
+    }
+
+    a:hover {
+      transform: translateX(6px);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 28px;
+    padding: clamp(1.2rem, 4vw, 2rem);
+    background: var(--surface);
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease;
+
+    &.sent {
+      animation: sentPop 0.45s ease;
+    }
+
+    label {
+      display: grid;
+      gap: 0.45rem;
+      color: var(--text-primary);
+      font-weight: 800;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 0.9rem 1rem;
+      color: var(--text-primary);
+      background: var(--surface-soft);
+      font: inherit;
+      outline: none;
+      resize: vertical;
+
+      &:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 4px var(--focus-ring);
+      }
+    }
+
+    label span {
+      color: var(--danger);
+      font-size: 0.84rem;
+    }
+  }
+
+  &__success {
+    margin: 0;
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+    color: var(--success-text);
+    background: var(--success-bg);
+    font-weight: 800;
+  }
+}
+
+@keyframes sentPop {
+  50% {
+    transform: scale(1.015);
+  }
+}
+
+@media (max-width: 840px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}

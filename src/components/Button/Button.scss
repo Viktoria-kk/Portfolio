@@ -1,0 +1,36 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.button {
+  @include inline-flex-center;
+  min-height: 46px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  color: var(--button-text);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform $transition-fast, box-shadow $transition-fast, background $transition-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  &--primary {
+    background: var(--gradient-primary);
+  }
+
+  &--secondary {
+    background: var(--surface-strong);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--border-color);
+  }
+}

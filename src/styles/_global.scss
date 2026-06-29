@@ -1,0 +1,77 @@
+@use './variables' as *;
+@use './theme';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text-primary);
+  background: var(--background);
+  font-family: $font-main;
+  line-height: 1.6;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: clamp(4rem, 8vw, 6.5rem) 0;
+}
+
+.page-section {
+  background:
+    radial-gradient(circle at top right, var(--blob-two), transparent 24rem),
+    radial-gradient(circle at bottom left, var(--blob-one), transparent 22rem),
+    var(--background);
+}
+
+.state-message {
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1rem;
+  color: var(--text-secondary);
+  background: var(--surface);
+  font-weight: 800;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+::selection {
+  color: white;
+  background: var(--accent);
+}

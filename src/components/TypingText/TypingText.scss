@@ -1,0 +1,16 @@
+.typing-text {
+  color: var(--accent);
+
+  &::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 0.12rem;
+    animation: blink 0.8s steps(2, start) infinite;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

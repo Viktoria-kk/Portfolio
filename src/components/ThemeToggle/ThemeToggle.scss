@@ -1,0 +1,7 @@
+@use '../../styles/mixins' as *;
+
+.theme-toggle {
+  @include icon-button;
+  background: var(--surface-strong);
+  color: var(--text-primary);
+}
