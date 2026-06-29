@@ -6,7 +6,7 @@ import './Hero.scss';
 const floatingItems = ['<>', '{}', '()', 'const', 'React', 'Node.js', 'JavaScript'];
 
 function Hero() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section className="hero">
@@ -19,7 +19,7 @@ function Hero() {
       </div>
 
       <div className="hero__inner container">
-        <div className="hero__content reveal visible">
+        <div className={`hero__content ${language === 'ka' ? 'hero__content--ka' : ''} reveal visible`}>
           <p className="hero__eyebrow">React / Node.js / UI</p>
           <h1>
             {t.home.hello}
@@ -43,12 +43,7 @@ function Hero() {
               <span />
               <span />
             </div>
-            <pre>{`const student = {
-  name: 'Viktoria',
-  university: 'BTU',
-  focus: 'Node.js',
-  mindset: 'always learning'
-};`}</pre>
+            <pre>{t.home.codeSnippet}</pre>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ function Footer() {
           <a href="https://github.com/Viktoria-kk" target="_blank" rel="noreferrer">
             {t.common.github}
           </a>
-          <a href="mailto:viktoria@example.com">{t.common.email}</a>
+          <a href="mailto:vika.kazarova.vk@gmail.com">{t.common.email}</a>
         </div>
       </div>
     </footer>

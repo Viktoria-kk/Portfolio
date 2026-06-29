@@ -64,9 +64,9 @@ function Contact() {
             <a href="https://github.com/Viktoria-kk" target="_blank" rel="noreferrer">
               GitHub: Viktoria-kk
             </a>
-            <a href="mailto:viktoria@example.com">{t.common.email}: viktoria@example.com</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              {t.contact.linkedin}
+            <a href="mailto:vika.kazarova.vk@gmail.com">{t.common.email}: vika.kazarova.vk@gmail.com</a>
+            <a href="https://www.linkedin.com/in/viktoria-kazarovi/" target="_blank" rel="noreferrer">
+              {t.contact.linkedin}: viktoria-kazarovi
             </a>
             <span>{t.contact.location}</span>
           </div>
